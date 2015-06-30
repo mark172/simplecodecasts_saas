@@ -40,7 +40,7 @@ gem 'spring',        group: :development
 # Use devise for user auth
 gem 'devise', '3.4.1'
 
-# Use strip for handling payments
+# Use stripe for handling payments
 gem 'stripe', '1.16.1'
 
 # Use Figaro to hide secret keys
