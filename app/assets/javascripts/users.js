@@ -35,7 +35,7 @@ $(document).ready(function() {
         
         //submit this form
         
-        f.get(0).submit();
+        f.get(0).submit(); // get(0) to grab first form
     }
     
 })
