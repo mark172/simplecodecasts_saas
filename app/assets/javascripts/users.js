@@ -38,4 +38,4 @@ $(document).ready(function() {
         f.get(0).submit(); // get(0) to grab first form
     }
     
-})
+});
