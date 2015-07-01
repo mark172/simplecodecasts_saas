@@ -3,22 +3,22 @@ $(document).ready(function() {
     
     // watch for form submission
     $("#form-submit-btn").click(function(event) {
-        event.preventDefault();
-        $('input[type=submit]').prop('disabled', true);
+        event.preventDefault();                              // prevent default behaviour so that it doesn't yet submit
+        $('input[type=submit]').prop('disabled', true);     //  disable button to prevent multiple clicks
         var error = false;
-        var ccNum = $('#card_number').val(),
+        var ccNum = $('#card_number').val(),    // assign variable values from text fields
             cvcNum = $('#card_code').val(),
             expMonth = $('#card_month').val(),
             expYear = $('#card_year').val();
             
             if (!error) {
                 // get the Stripe token
-                Stripe.createToken({
+                Stripe.createToken({        // if no errors, send information to Stripe
                     number: ccNum,
                     cvc: cvcNum,
                     exp_month: expMonth,
                     exp_year: expYear
-                }, stripeResponseHandler);
+                }, stripeResponseHandler); // once Stripe returns a token, run this function
             }
             return false;
     }); // form submission
